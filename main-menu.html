@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Main Menu</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="center-wrap">
+<div class="menu-box">
+<h2>MAIN MENU</h2>
+<form id="menuForm">
+<label><input type="radio" name="option" value="help" checked> Help Instructions</label><br>
+<label><input type="radio" name="option" value="video"> Video about myself</label><br>
+<label><input type="radio" name="option" value="webpage"> My personal webpage</label><br>
+<label><input type="radio" name="option" value="game"> Start this game</label><br>
+
+
+<button type="button" class="primary" id="runBtn">RUN</button>
+</form>
+</div>
+</div>
+
+
+<script>
+document.getElementById('runBtn').addEventListener('click', function() {
+    const option = document.querySelector('input[name="option"]:checked').value;
+
+    if (option === 'help') {
+        window.location.href = "Help.html";   // open Help page
+    }
+    else if (option === 'video') {
+        window.location.href = "Video.html";  // open Video page
+    }
+    else if (option === 'webpage') {
+        window.location.href = "MyWebPage.html"; // open Personal Webpage
+    }
+    else if (option === 'game') {
+        window.location.href = "5981assign4.html";   // open Game page
+    }
+});
+</script>
+</body>
+</html>
